@@ -42,4 +42,21 @@ static int RastgeleSayiUret(int min, int max)
     // max değere 1 ekliyoruz çünkü Next metodunda üst sınır dahil değildir.
     return rastgele.Next(min, max + 1);
 }
+static bool TahminiKontrolEt(int tahmin, int hedef)
+{
+    if (tahmin < hedef)
+    {
+        Console.WriteLine(">> İPUCU: Daha BÜYÜK bir sayı girmelisin.\n");
+        return false;
+    }
+    else if (tahmin > hedef)
+    {
+        Console.WriteLine(">> İPUCU: Daha KÜÇÜK bir sayı girmelisin.\n");
+        return false;
+    }
+    else
+    {
+        return true; // Tahmin hedefe eşitse oyun biter
+    }
+}
 
