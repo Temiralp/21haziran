@@ -36,3 +36,10 @@ public static void Secenekler(){
 
 
 }
+static int RastgeleSayiUret(int min, int max)
+{
+    Random rastgele = new Random();
+    // max değere 1 ekliyoruz çünkü Next metodunda üst sınır dahil değildir.
+    return rastgele.Next(min, max + 1);
+}
+
